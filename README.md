@@ -5,3 +5,6 @@ Exclusively meant for usage within the Neuron Health or Viradoctores organizatio
 
 ## Installation
 pip config set-global global.extra-index-url https://github.com/PrettyBoyHelios/python-vira
+pip config set-global global.extra-index-url https://github.com/PrettyBoyHelios/python-vira
+pip config set global.extra-index-url https://github.com/PrettyBoyHelios/python-vira
+

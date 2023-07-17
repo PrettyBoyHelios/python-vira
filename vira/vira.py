@@ -7,9 +7,13 @@ from dotenv import load_dotenv
 
 
 class ViraAPI:
-    def __init__(self):
-        load_dotenv()
-        self.base_url = os.getenv("API_URL")
+    def __init__(self, url=""):
+        if url == "":
+            load_dotenv()
+            url = os.getenv("API_URL")
+            if url == "":
+                raise Exception("no base url provided for Vira API")
+        self.base_url = url
 
     def get_invoice_files(self, letter):
         facturama_id = letter['cfdi']
